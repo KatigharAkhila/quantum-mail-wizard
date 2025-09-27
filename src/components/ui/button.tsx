@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,6 +15,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        quantum: "bg-gradient-to-r from-quantum-glow/80 to-quantum-energy/80 text-foreground shadow-lg hover:shadow-xl quantum-glow hover:scale-105 font-semibold",
+        secure: "bg-quantum-secure/20 text-quantum-secure border border-quantum-secure/30 hover:bg-quantum-secure/30 quantum-secure",
+        energy: "bg-quantum-energy/20 text-quantum-energy border border-quantum-energy/30 hover:bg-quantum-energy/30 hover:shadow-lg",
       },
       size: {
         default: "h-10 px-4 py-2",
